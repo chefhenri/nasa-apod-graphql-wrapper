@@ -1,0 +1,26 @@
+{
+  "name": "nasa-apod-graphql-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "src/index.js",
+  "scripts": {
+    "serve": "babel-node src/index.js"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.22.2",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.12.3",
+    "graphql-tools": "^7.0.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.12"
+  }
+}
