@@ -1,10 +1,6 @@
-const express = require('express');
-const {ApolloServer, makeExecutableSchema} = require('apollo-server-express');
-const {typeDefs, resolvers} = require('./api/apod.api');
-
-// import express from 'express';
-// import {ApolloServer, makeExecutableSchema} from 'apollo-server-express';
-// import {typeDefs, resolvers} from "./api/apod.api";
+import express from 'express';
+import {ApolloServer, makeExecutableSchema} from 'apollo-server-express';
+import {typeDefs, resolvers} from "./api/apod.api";
 
 const port = process.env.PORT || 8080;
 
