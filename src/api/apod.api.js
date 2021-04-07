@@ -1,5 +1,8 @@
-import axios from "axios";
-import {readFileSync} from 'fs';
+const axios = require('axios');
+const {readFileSync} = require('fs');
+
+// import axios from "axios";
+// import {readFileSync} from 'fs';
 
 const BASE_URL = 'https://api.nasa.gov/planetary/apod'
 
