@@ -1,9 +1,6 @@
 const fs = require('fs');
 const axios = require('axios');
 
-// import axios from "axios";
-// import {readFileSync} from 'fs';
-
 const BASE_URL = 'https://api.nasa.gov/planetary/apod'
 
 const typeDefs = fs.readFileSync(`${__dirname}/apod.api.graphql`, 'utf-8');
