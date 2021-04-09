@@ -1,6 +1,7 @@
 const express = require('express');
 const {ApolloServer} = require('apollo-server-express');
 const {resolvers, typeDefs} = require('./api/apod.api');
+require('dotenv').config()
 
 const port = process.env.PORT || 8080;
 
