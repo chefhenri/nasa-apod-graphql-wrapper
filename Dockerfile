@@ -1,7 +1,7 @@
 FROM node:latest
 
-ARG PORT
-ARG BASE_URL
+ARG PORT=8080
+ARG BASE_URL=https://api.nasa.gov/planetary/apod
 
 ENV port $PORT
 ENV base_url $BASE_URL
@@ -10,4 +10,4 @@ WORKDIR .
 COPY package.json package-lock.json ./
 RUN npm install
 COPY src ./src
-CMD PORT=$PORT BASE_URL=$BASE_URL node src/index.js
+CMD PORT=$port BASE_URL=$base_url node src/index.js
