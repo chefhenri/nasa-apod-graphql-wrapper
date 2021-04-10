@@ -1,14 +1,17 @@
 type Query {
-    apod(apiKey: String!, date: String!): Apod!
-    apods(apiKey: String!, startDate: String!, endDate: String!): [Apod!]!
+    today(apiKey: String!, thumbs: Boolean): Apod!
+    apodByDate(apiKey: String!, date: String!, thumbs: Boolean): Apod!
+    apodsByDate(apiKey: String!, startDate: String!, endDate: String!, thumbs: Boolean): [Apod!]!
+    randomApods(apiKey: String!, count: Int!, thumbs: Boolean): [Apod!]!
 }
 
 type Apod {
-    date: String!,
-    explanation: String!,
-    hdurl: String!,
-    mediaType: String!,
-    serviceVersion: String!,
-    title: String!,
+    copyright: String
+    date: String!
+    explanation: String!
+    hdurl: String!
+    mediaType: String!
+    serviceVersion: String!
+    title: String!
     url: String!
 }
