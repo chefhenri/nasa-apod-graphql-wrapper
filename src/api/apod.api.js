@@ -33,7 +33,18 @@ const resolvers = {
                     return res.data;
                 })
         }
+    },
+    Apod: {
+        copyright: apod => apod['copyright'],
+        date: apod => apod['date'],
+        explanation: apod => apod['explanation'],
+        hdurl: apod => apod['hdurl'],
+        mediaType: apod => apod['media_type'],
+        serviceVersion: apod => apod['service_version'],
+        title: apod => apod['title'],
+        url: apod => apod['url']
     }
+
 }
 
 // Converts camel case JSON key to snake case HTTP param format
