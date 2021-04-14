@@ -1,9 +1,12 @@
-const {readFileSync} = require('fs');
-const {parse} = require('path')
+// const {readFileSync} = require('fs');
+// const {parse} = require('path')
 
-const typeDefs = readFileSync(`${__dirname}/${parse(__filename).name}.gql`, 'utf-8');
+import {parse} from 'path';
+import {readFileSync} from 'fs';
 
-const resolvers = {
+export const typeDefs = readFileSync(`${__dirname}/${parse(__filename).name}.gql`, 'utf-8');
+
+export const resolvers = {
     Apod: {
         copyright: apod => apod['copyright'],
         date: apod => apod['date'],
@@ -16,7 +19,7 @@ const resolvers = {
     }
 }
 
-module.exports = {
-    typeDefs,
-    resolvers
-}
+// module.exports = {
+//     typeDefs,
+//     resolvers
+// }

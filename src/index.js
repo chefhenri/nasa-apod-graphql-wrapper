@@ -1,8 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-const {makeExecutableSchema} = require('apollo-server-express');
+// const fs = require('fs');
+// const path = require('path');
+// const {makeExecutableSchema} = require('apollo-server-express');
 
-class Api {
+import fs from 'fs';
+import path from 'path';
+import {makeExecutableSchema} from 'apollo-server-express';
+
+export default new class Api {
     constructor() {
         this._read = true;
         this._typeDefs = [];
@@ -35,6 +39,6 @@ class Api {
     }
 }
 
-module.exports = {
-    explorer: new Api()
-}
+// module.exports = {
+//     explorer: new Api()
+// }

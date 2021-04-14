@@ -1,10 +1,14 @@
-const {readFileSync} = require('fs');
-const {parse} = require('path')
-const axios = require('axios');
+// const {readFileSync} = require('fs');
+// const {parse} = require('path')
+// const axios = require('axios');
 
-const typeDefs = readFileSync(`${__dirname}/${parse(__filename).name}.gql`, 'utf-8');
+import axios from "axios";
+import {parse} from 'path';
+import {readFileSync} from 'fs';
 
-const resolvers = {
+export const typeDefs = readFileSync(`${__dirname}/${parse(__filename).name}.gql`, 'utf-8');
+
+export const resolvers = {
     Query: {
         today: (parent, args) => {
             return axios.get(buildUrl(args))
@@ -53,7 +57,7 @@ const buildUrl = args => {
     return `${process.env.BASE_URL}?${params.join('&')}`
 }
 
-module.exports = {
-    typeDefs,
-    resolvers
-}
+// module.exports = {
+//     typeDefs,
+//     resolvers
+// }

@@ -8,7 +8,7 @@
   "main": "src/server.js",
   "scripts": {
     "build": "babel src --out-dir dist --copy-files",
-    "serve": "npm run build && node dist/server.js"
+    "serve": "npm run build && node -r dotenv/config dist/server.js"
   },
   "dependencies": {
     "apollo-server-express": "^2.22.2",

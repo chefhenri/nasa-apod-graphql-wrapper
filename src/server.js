@@ -1,8 +1,12 @@
-const express = require('express');
-const {ApolloServer} = require('apollo-server-express');
-const {explorer} = require('./index');
+// const express = require('express');
+// const {ApolloServer} = require('apollo-server-express');
+// const {explorer} = require('./index');
 
-require('dotenv').config()
+// require('dotenv').config()
+
+import express from 'express';
+import {ApolloServer} from 'apollo-server-express';
+import explorer from './index';
 
 explorer.getSchema()
     .then(schema => {
