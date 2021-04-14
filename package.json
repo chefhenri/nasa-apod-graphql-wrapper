@@ -5,9 +5,9 @@
   "keywords": [],
   "license": "ISC",
   "author": "",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
-    "serve": "babel-node src/index.js"
+    "serve": "babel-node src/server.js"
   },
   "dependencies": {
     "apollo-server-express": "^2.22.2",
