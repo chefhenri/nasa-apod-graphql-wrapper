@@ -4,13 +4,13 @@ A wrapper for NASA's Astronomy Picture of the Day (APOD) API made with GraphQL a
 ## Installation
 User Docker's command line to pull the image from Docker Hub
 ```bash
-docker pull neutronchicken/nasa-apod-graphql-wrapper:latest
+docker pull neutronchicken/na-gql-wrap:latest
 ```
 
 ## Usage
-Run a container with the `nasa-apod-graphql-wrapper` image
+Run a container with the `na-gql-wrap` image
 ```bash
-docker run --name=[container_name] -d -p [port]:8080 neutronchicken/nasa-apod-graphql-wrapper:latest
+docker run --name=[container_name] -d -p [port]:8080 neutronchicken/na-gql-wrap:latest
 ```
 
 Optionally, provide the `BASE_URL` and `PORT` environment variables with the `--env-file=[path/to/.env]` flag.
