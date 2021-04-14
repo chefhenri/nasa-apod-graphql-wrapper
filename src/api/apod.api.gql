@@ -1,10 +1,3 @@
-type Query {
-    today(apiKey: String!, thumbs: Boolean): Apod!
-    apodByDate(apiKey: String!, date: String!, thumbs: Boolean): Apod!
-    apodsByDate(apiKey: String!, startDate: String!, endDate: String, thumbs: Boolean): [Apod!]!
-    randomApods(apiKey: String!, count: Int!, thumbs: Boolean): [Apod!]!
-}
-
 type Apod {
     copyright: String
     date: String!
