@@ -3,13 +3,17 @@ import {ApolloServer} from 'apollo-server-express';
 import explorer from './index';
 
 explorer.getSchema()
-    .then(schema => {
+    .then(({typeDefs, resolvers}) => {
+        let mock = process.env.MOCK === 'true'
+
         const app = express();
-        const server = new ApolloServer({schema});
+        const server = new ApolloServer({typeDefs, resolvers, mocks: mock});
         server.applyMiddleware({app});
 
         app.listen(process.env.PORT, () => {
-            console.log(`Server ready at http://localhost:${process.env.PORT}${server.graphqlPath}`);
+            console.log(
+                `${mock ? 'Mock server' : 'Server'} ready at http://localhost:${process.env.PORT}${server.graphqlPath}`
+            );
         })
     })
     .catch(err => {

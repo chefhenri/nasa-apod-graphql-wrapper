@@ -28,9 +28,14 @@ export default new class Api {
             this._read = false;
         }
 
-        return makeExecutableSchema({
+        // return makeExecutableSchema({
+        //     typeDefs: this._typeDefs,
+        //     resolvers: this._resolvers
+        // })
+
+        return {
             typeDefs: this._typeDefs,
             resolvers: this._resolvers
-        })
+        }
     }
 }
