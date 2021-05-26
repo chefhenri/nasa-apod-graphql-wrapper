@@ -1,7 +1,3 @@
-// const {readFileSync} = require('fs');
-// const {parse} = require('path')
-// const axios = require('axios');
-
 import axios from "axios";
 import {parse} from 'path';
 import {readFileSync} from 'fs';
@@ -56,8 +52,3 @@ const buildUrl = args => {
 
     return `${process.env.BASE_URL}?${params.join('&')}`
 }
-
-// module.exports = {
-//     typeDefs,
-//     resolvers
-// }

@@ -1,6 +1,3 @@
-// const {readFileSync} = require('fs');
-// const {parse} = require('path')
-
 import {parse} from 'path';
 import {readFileSync} from 'fs';
 
@@ -18,8 +15,3 @@ export const resolvers = {
         url: apod => apod['url']
     }
 }
-
-// module.exports = {
-//     typeDefs,
-//     resolvers
-// }

@@ -26,5 +26,5 @@ dist/**/*.*
 # Package dependencies
 node_modules/
 
-# Environment variables
+# Dotenv
 .env

@@ -1,0 +1,18 @@
+# Project files
+.idea/
+
+# Dependencies
+node_modules/
+
+# Dotenv
+.env
+
+# Generated files
+dist/
+
+# Git
+.git/
+.gitignore
+
+# Workflows
+.github/
