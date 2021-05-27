@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import {makeExecutableSchema} from 'apollo-server-express';
 
 export default new class Api {
     constructor() {
@@ -28,9 +27,9 @@ export default new class Api {
             this._read = false;
         }
 
-        return makeExecutableSchema({
+        return {
             typeDefs: this._typeDefs,
             resolvers: this._resolvers
-        })
+        }
     }
 }
