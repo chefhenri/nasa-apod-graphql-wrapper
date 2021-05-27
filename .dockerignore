@@ -1,18 +1,18 @@
 # Project files
 .idea/
 
-# Dependencies
-node_modules/
-
 # Dotenv
 .env
 
 # Generated files
+.idea/**/contentModel.xml
 dist/
 
-# Git
-.git/
-.gitignore
+# Package dependencies
+/node_modules/
+
+# File-based project format
+*.iws
 
 # Workflows
 .github/
