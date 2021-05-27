@@ -13,3 +13,6 @@ dist/
 
 # File-based project format
 *.iws
+
+# Workflows
+.github/
