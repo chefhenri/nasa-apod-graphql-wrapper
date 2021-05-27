@@ -1,10 +1,10 @@
 FROM node:latest
 
 ARG BASE_URL=https://api.nasa.gov/planetary/apod
-ARG MOCK
 
 ENV PORT 8080
-ENV MOCK $MOCK
+ENV MOCK false
+ENV BASE_URL $BASE_URL
 
 # Install dependencies
 WORKDIR .
@@ -15,4 +15,6 @@ RUN npm install
 COPY .babelrc ./
 COPY src ./src
 
-ENTRYPOINT BASE_URL=$BASE_URL MOCK=${MOCK:=false} PORT=$PORT npm run serve
+EXPOSE $PORT
+
+ENTRYPOINT MOCK=$MOCK PORT=$PORT BASE_URL=$BASE_URL npm run serve

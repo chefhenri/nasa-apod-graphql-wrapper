@@ -1,5 +1,6 @@
 import express from 'express';
 import {ApolloServer} from 'apollo-server-express';
+
 import explorer from './index';
 
 explorer.getSchema()
@@ -7,7 +8,11 @@ explorer.getSchema()
         let mock = process.env.MOCK === 'true'
 
         const app = express();
-        const server = new ApolloServer({typeDefs, resolvers, mocks: mock});
+        const server = new ApolloServer({
+            typeDefs: typeDefs,
+            resolvers: resolvers,
+            mocks: mock
+        });
         server.applyMiddleware({app});
 
         app.listen(process.env.PORT, () => {
